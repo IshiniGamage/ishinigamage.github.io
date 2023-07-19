@@ -510,28 +510,29 @@
 	<script src="assets/js/common.js"></script>
 
 	<script>
-		if (localStorage.getItem("theme") === null) {
-			localStorage.setItem('theme', 'dark');
-		} 
-		if(localStorage.getItem('theme') === 'dark') {
-			$('head').append('<link rel="stylesheet" id="dark-mode" type="text/css" href="assets/styles/style-dark.css" />');
-		} else {
-			$('head link[href="assets/styles/style-dark.css"]').remove();
-		}
+$(document).ready(function() {
+  // Initialize the default active tab
+  $('.tabcontent:first').show();
+  
+  // Handle tab click event
+  $('.nav__item').click(function(e) {
+    e.preventDefault();
+    var targetTab = $(this).find('a').attr('href');
+    
+    // Hide all tab content
+    $('.tabcontent').hide();
+    
+    // Show the selected tab content
+    $(targetTab).show();
+    
+    // Remove active class from all nav items
+    $('.nav__item').removeClass('active');
+    
+    // Add active class to the clicked nav item
+    $(this).addClass('active');
+  });
+});
 
-		$('.light').click(function (){
-			localStorage.setItem('theme', 'light');
-			$('head link[href="assets/styles/style-dark.css"]').remove();
-		});
-
-		$('.dark').click(function (){
-			localStorage.setItem('theme', 'dark');
-			$('head').append('<link rel="stylesheet" id="dark-mode" type="text/css" href="assets/styles/style-dark.css" />');
-		});
-
-		$('[data-toggle="tooltip"]').tooltip({
-			trigger : 'hover'
-		});
 	</script>
 </body>
 
