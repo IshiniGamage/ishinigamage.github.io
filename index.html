@@ -510,30 +510,29 @@
 	<script src="assets/js/common.js"></script>
 
 	<script>
-$(document).ready(function() {
-  // Initialize the default active tab
-  $('.tabcontent:first').show();
-  
-  // Handle tab click event
-  $('.nav__item').click(function(e) {
-    e.preventDefault();
-    var targetTab = $(this).find('a').attr('href');
-    
-    // Hide all tab content
-    $('.tabcontent').hide();
-    
-    // Show the selected tab content
-    $(targetTab).show();
-    
-    // Remove active class from all nav items
-    $('.nav__item').removeClass('active');
-    
-    // Add active class to the clicked nav item
-    $(this).addClass('active');
-  });
-});
-
-	</script>
+		$(document).ready(function() {
+		  // Initialize the default active tab
+		  $('.tabcontent:first').show();
+	
+		  // Handle tab click event
+		  $('.nav__item').click(function(e) {
+			e.preventDefault();
+			var targetTab = $(this).find('a').attr('href');
+	
+			// Hide all tab content
+			$('.tabcontent').hide();
+	
+			// Show the selected tab content
+			$(targetTab).show();
+	
+			// Remove active class from all nav items
+			$('.nav__item').removeClass('active');
+	
+			// Add active class to the clicked nav item
+			$(this).addClass('active');
+		  });
+		});
+	  </script>
 </body>
 
 </html>
