@@ -1390,12 +1390,12 @@ button:focus {
   margin-left: 10px;
   margin-right: 10px;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 998px) {
   .gallery-grid-2 .gallery-grid__item {
     width: calc(50% - 20px);
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 778px) {
   .gallery-grid-2 .gallery-grid__item {
     width: 100%;
   }
@@ -1404,12 +1404,12 @@ button:focus {
   margin-bottom: 1.25rem;
   width: calc(33% - 18px);
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 998px) {
   .gallery-grid__item {
     width: calc(60% - 20px);
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 778px) {
   .gallery-grid__item {
     width: 100%;
   }
@@ -1423,7 +1423,7 @@ button:focus {
 .gallery-grid-two .gallery-grid__item {
   width: calc(60% - 20px);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 778px) {
   .gallery-grid-two .gallery-grid__item {
     width: 100%;
   }
@@ -1437,12 +1437,12 @@ button:focus {
   width: 100%;
   z-index: 1;
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 998px) {
   .gallery-grid__image-wrap {
     height: 12.5rem;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 778px) {
   .gallery-grid__image-wrap {
     height: 18.125rem;
   }
