@@ -1421,7 +1421,7 @@ button:focus {
   transform: scale3d(1.1, 1.1, 1);
 }
 .gallery-grid-two .gallery-grid__item {
-  width: calc(50% - 18px);
+  width: calc(50% - 20px);
 }
 @media only screen and (max-width: 768px) {
   .gallery-grid-two .gallery-grid__item {
