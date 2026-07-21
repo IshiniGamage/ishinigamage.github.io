@@ -440,7 +440,9 @@
                                 </div>
                                 <h2 class="title title--h3">Contact Form</h2>
 
-                                <form action="https://formspree.io/f/xwkdkqlw" method="POST">
+                                <form action="https://script.google.com/macros/s/AKfycby8KgYP_KPe3WCPmZBgQEhhrcQdNQYEqGZfIGNSRHGvzMR5D-VEHbsqGIbRZpyQc_ufCg/exec"
+                                    method="POST"
+                                    enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="form-group col-12 col-md-6">
                                             <input type="text" class="form-control" id="nameContact" name="nameContact"
@@ -468,17 +470,24 @@
                                             <div class="help-block with-errors"></div>
                                         </div>
 
-                                        <div class="form-group col-12 col-md-12">
-                                            <label for="attachment" class="mb-2">Attachment (Optional)</label>
-                                            <input type="file"
-                                                class="form-control"
-                                                id="attachment"
-                                                name="attachment"
-                                                accept="image/*,.pdf,.doc,.docx,.txt,.zip,.rar,.xls,.xlsx,.ppt,.pptx">
-                                            <small class="text-muted">
-                                                You can attach an image, PDF, Word document, ZIP, or other supported file.
-                                            </small>
-                                        </div>
+                                            <div class="form-group col-12 col-md-12">
+                                                <label for="attachment" class="mb-2">Attachment (Optional)</label>
+
+                                                <input type="file"
+                                                    class="form-control"
+                                                    id="attachment"
+                                                    name="attachment"
+                                                    accept="image/*,.pdf,.doc,.docx,.txt,.zip,.rar">
+
+                                                <div id="filePreview" style="margin-top:10px; display:none;">
+                                                    <span id="fileName"></span>
+                                                    <button type="button" 
+                                                            id="removeFile" 
+                                                            class="btn btn-sm btn-danger">
+                                                        ✕ Remove
+                                                    </button>
+                                                </div>
+                                            </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 col-md-6 order-2 order-md-1 text-center text-md-left">
@@ -507,7 +516,25 @@
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/plugins.min.js"></script>
     <script src="assets/js/common.js"></script>
+<script>
+const fileInput = document.getElementById('attachment');
+const filePreview = document.getElementById('filePreview');
+const fileName = document.getElementById('fileName');
+const removeFile = document.getElementById('removeFile');
 
+fileInput.addEventListener('change', function () {
+    if (this.files.length > 0) {
+        fileName.textContent = this.files[0].name;
+        filePreview.style.display = "block";
+    }
+});
+
+removeFile.addEventListener('click', function () {
+    fileInput.value = ""; // remove selected file
+    filePreview.style.display = "none";
+    fileName.textContent = "";
+});
+</script>
     <script>
         if (localStorage.getItem("theme") === null) {
             localStorage.setItem('theme', 'dark');
