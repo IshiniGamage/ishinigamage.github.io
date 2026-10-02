@@ -2513,3 +2513,51 @@ button:focus {
   background: #dc3545;
   color: white;
 }
+
+
+.blog-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.blog-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.blog-download {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.blog-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+
+  background: #ff8c05;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-download-btn:hover {
+  background: #d61a5e;
+  transform: translateY(-2px);
+}
+
+.blog-download-btn i {
+  font-size: 14px;
+}
